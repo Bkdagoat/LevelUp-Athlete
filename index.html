@@ -44,14 +44,6 @@
             <button type="submit" class="primary-btn">Log In</button>
           </form>
         </article>
-        <article class="card">
-          <h3>Why LevelUp AI?</h3>
-          <ul>
-            <li>Personalized skill scoring</li>
-            <li>Mistake detection from every session</li>
-            <li>Recommended drills for faster improvement</li>
-          </ul>
-        </article>
       </section>
     </template>
 
@@ -69,16 +61,24 @@
     <template id="videoScreen">
       <section class="card-stack">
         <article class="card">
-          <h2>Capture training session</h2>
-          <p>Record with your camera or upload your latest workout clip.</p>
+          <h2>Upload training image/video</h2>
+          <p>We now run real pose estimation on your media to generate feedback.</p>
+
+          <label>
+            Choose media
+            <input id="mediaInput" type="file" accept="image/*,video/*" />
+          </label>
+
           <div class="split-actions">
-            <button class="primary-btn">🎥 Record Video</button>
-            <button class="secondary-btn">⬆️ Upload Video</button>
+            <button class="primary-btn" id="analyzeMedia">Run Real AI Analysis</button>
+            <button class="secondary-btn" id="clearMedia">Clear</button>
           </div>
-          <div class="mock-upload">
-            <p><strong>Latest upload:</strong> sprint-drills-session.mp4</p>
-            <p>Status: Ready for AI analysis</p>
+
+          <div class="mock-upload" id="uploadStatus">
+            <p><strong>Status:</strong> Waiting for upload</p>
           </div>
+
+          <div class="preview-wrap" id="previewWrap"></div>
         </article>
       </section>
     </template>
@@ -91,6 +91,6 @@
       <section class="card-stack" id="dashboardContent"></section>
     </template>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
