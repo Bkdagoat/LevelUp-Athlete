@@ -34,3 +34,7 @@ Then open `http://localhost:4173` in your browser.
 ## Important note
 
 The pose model is loaded from CDN at runtime, so internet access is required for first load.
+
+## Need production-grade sport-specific analysis functions?
+
+Use `FUNCTION_SPEC.md` as a ready-to-send specification for your coding agent (backend endpoints, function signatures, sport rule schema, response contract, and required tests).
