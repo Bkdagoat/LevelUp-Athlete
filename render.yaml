@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: levelup-ai-backend
+    env: node
+    plan: free
+    rootDir: src
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    regions:
+      - oregon
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        scope: runtime
+        sync: false
+      - key: NODE_ENV
+        value: production
