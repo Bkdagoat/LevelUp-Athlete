@@ -3,9 +3,8 @@ services:
     name: levelup-ai-backend
     env: node
     plan: free
-    rootDir: src
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd src && npm install
+    startCommand: cd src && npm start
     healthCheckPath: /
     regions:
       - oregon
