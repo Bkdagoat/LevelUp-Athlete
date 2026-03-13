@@ -19,11 +19,12 @@
       <main id="screenContainer" class="screen-container"></main>
 
       <nav class="bottom-nav" aria-label="Main navigation">
-        <button data-screen="login" class="nav-item active">Login</button>
-        <button data-screen="sports" class="nav-item">Sports</button>
-        <button data-screen="video" class="nav-item">Video</button>
-        <button data-screen="analysis" class="nav-item">Analysis</button>
-        <button data-screen="dashboard" class="nav-item">Dashboard</button>
+        <button data-page="0" class="nav-item active">🏠 Home</button>
+        <button data-page="1" class="nav-item">⚙️ Setup</button>
+        <button data-page="2" class="nav-item">📹 Upload</button>
+        <button data-page="3" class="nav-item">📊 Results</button>
+        <button data-page="4" class="nav-item">👥 Coach</button>
+        <button data-page="5" class="nav-item">📈 Team</button>
       </nav>
     </div>
 
@@ -97,6 +98,30 @@
 
     <template id="dashboardScreen">
       <section class="card-stack" id="dashboardContent"></section>
+    </template>
+
+    <template id="coachDashboardScreen">
+      <section class="card-stack" id="coachContent"></section>
+    </template>
+
+    <template id="teamAnalyticsScreen">
+      <section class="card-stack" id="teamAnalyticsContent"></section>
+    </template>
+
+    <template id="progressGraphScreen">
+      <section class="card-stack" id="progressContent"></section>
+    </template>
+
+    <template id="playerComparisonScreen">
+      <section class="card-stack" id="comparisonContent"></section>
+    </template>
+
+    <template id="scoutingProfileScreen">
+      <section class="card-stack" id="scoutingContent"></section>
+    </template>
+
+    <template id="athleteHistoryScreen">
+      <section class="card-stack" id="historyContent"></section>
     </template>
 
     <script type="module" src="app.js"></script>
