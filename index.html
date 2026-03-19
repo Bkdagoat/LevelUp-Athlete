@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LevelUp AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">LevelUp AI</p>
+          <h1 id="screenTitle">Athlete Login</h1>
+        </div>
+        <button id="themeToggle" class="ghost-btn" aria-label="Toggle theme">🌙</button>
+      </header>
+
+      <main id="screenContainer" class="screen-container"></main>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <button data-screen="login" class="nav-item active">Login</button>
+        <button data-screen="sports" class="nav-item">Sports</button>
+        <button data-screen="video" class="nav-item">Video</button>
+        <button data-screen="analysis" class="nav-item">Analysis</button>
+        <button data-screen="dashboard" class="nav-item">Dashboard</button>
+      </nav>
+    </div>
+
+    <template id="loginScreen">
+      <section class="card-stack">
+        <article class="card">
+          <h2>Welcome back athlete 👋</h2>
+          <p>Sign in to review your performance and unlock AI training insights.</p>
+          <form class="form-grid" id="loginForm">
+            <label>
+              Email
+              <input type="email" placeholder="athlete@email.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" placeholder="••••••••" required />
+            </label>
+            <button type="submit" class="primary-btn">Log In</button>
+          </form>
+        </article>
+        <article class="card">
+          <h3>Why LevelUp AI?</h3>
+          <ul>
+            <li>Personalized skill scoring</li>
+            <li>Mistake detection from every session</li>
+            <li>Recommended drills for faster improvement</li>
+          </ul>
+        </article>
+      </section>
+    </template>
+
+    <template id="sportsScreen">
+      <section class="card-stack">
+        <article class="card">
+          <h2>Select your sports</h2>
+          <p>Choose one or more sports so our AI can tailor your analysis.</p>
+          <div class="chip-grid" id="sportsChips"></div>
+          <button class="primary-btn" id="saveSports">Save Preferences</button>
+        </article>
+      </section>
+    </template>
+
+    <template id="videoScreen">
+      <section class="card-stack">
+        <article class="card">
+          <h2>Capture training session</h2>
+          <p>Record with your camera or upload your latest workout clip.</p>
+          <div class="split-actions">
+            <button class="primary-btn">🎥 Record Video</button>
+            <button class="secondary-btn">⬆️ Upload Video</button>
+          </div>
+          <div class="mock-upload">
+            <p><strong>Latest upload:</strong> sprint-drills-session.mp4</p>
+            <p>Status: Ready for AI analysis</p>
+          </div>
+        </article>
+      </section>
+    </template>
+
+    <template id="analysisScreen">
+      <section class="card-stack" id="analysisContent"></section>
+    </template>
+
+    <template id="dashboardScreen">
+      <section class="card-stack" id="dashboardContent"></section>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
